@@ -33,3 +33,5 @@ public:
         return maxsquare;
     }
 };
+
+// 使用动态规划，dp[i][j]表示以(i, j)为右下角的最大正方形的边长。对于每个位置，如果matrix[i][j] == '1'，则dp[i][j] = min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1]) + 1，否则dp[i][j] = 0。最后返回maxside * maxside即可。
